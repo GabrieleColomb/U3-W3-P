@@ -1,0 +1,15 @@
+<div *ngFor="let cityInfo of cityInfos">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Weather in {{ cityInfo.cityName }}</h5>
+      <p class="card-text">
+        Temperature: {{ cityInfo.weatherData.main.temp }}°C
+      </p>
+      <p class="card-text">
+        Weather: {{ cityInfo.weatherData.weather[0].main }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<app-city-search (citySearched)="onSearch($event)"></app-city-search>

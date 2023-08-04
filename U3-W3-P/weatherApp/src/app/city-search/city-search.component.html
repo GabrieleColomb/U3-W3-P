@@ -1,0 +1,15 @@
+<h1>City Search</h1>
+<form (ngSubmit)="onSearch()">
+  <input
+    type="text"
+    [(ngModel)]="cityName"
+    name="cityName"
+    placeholder="Enter city name"
+  />
+  <button type="submit">Search</button>
+</form>
+<div *ngIf="weatherData">
+  <h2>Weather in {{ weatherData.name }}</h2>
+  <p>Temperature: {{ weatherData.main.temp }}°C</p>
+  <p>Weather: {{ weatherData.weather[0].main }}</p>
+</div>
