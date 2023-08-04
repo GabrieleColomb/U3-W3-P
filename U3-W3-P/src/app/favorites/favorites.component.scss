@@ -1,0 +1,29 @@
+
+$primaryColor: #007bff;
+$secondaryColor: #444;
+$cardBackgroundColor: #fff;
+$cardBorderColor: #ccc;
+$cardBoxShadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.card {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: $cardBackgroundColor;
+  border: 1px solid $cardBorderColor;
+  border-radius: 5px;
+  box-shadow: $cardBoxShadow;
+}
+
+.card-body {
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: $primaryColor;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+    color: $secondaryColor;
+  }
+}

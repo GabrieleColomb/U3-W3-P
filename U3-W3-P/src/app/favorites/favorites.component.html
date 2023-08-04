@@ -1,0 +1,18 @@
+<h1>Favorites</h1>
+<div class="favorites-container">
+  <div class="row">
+    <div *ngFor="let cityInfo of favoriteCities" class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Weather in {{ cityInfo.cityName }}</h5>
+          <p class="card-text">
+            Temperature: {{ cityInfo.weatherData?.main.temp }}°C
+          </p>
+          <p class="card-text">
+            Weather: {{ cityInfo.weatherData?.weather[0].main }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

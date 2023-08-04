@@ -1,0 +1,13 @@
+<div class="app-container">
+  <h1 class="app-title">Weather App</h1>
+  <nav class="app-nav">
+    <a routerLink="/" class="app-nav-link">Weather List</a> |
+    <a *ngIf="isAuthenticated()" routerLink="/favorites" class="app-nav-link"
+      >Favorites</a
+    >
+    <a *ngIf="!isAuthenticated()" routerLink="/login" class="app-nav-link"
+      >Login</a
+    >
+  </nav>
+  <router-outlet></router-outlet>
+</div>
